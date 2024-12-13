@@ -1,0 +1,201 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  /* max-width: 700px; */
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.input-section input,
+.input-section select,
+.input-section button {
+  flex: 1; 
+  min-width: 100px; 
+  padding: 10px;
+}
+
+.input-section input[type="date"] {
+  width: 150px; 
+}
+
+#add-task-btn {
+  width: 80px; 
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#task-input:focus {
+  border-color: #5cb85c;
+}
+
+#add-task-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-task-btn:hover {
+  background-color: #0fef0f;
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.task span {
+  flex: 1;
+  margin-right: 10px;
+  word-wrap: break-word;
+  max-height: 60px;
+  overflow-y: auto;
+}
+
+.task.removed {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.task.new-task {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.task.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.task button {
+  background: none;
+  border: none;
+  color: #007bff; /* Blue for Edit */
+  cursor: pointer;
+  margin-right: 5px;
+  transition: color 0.3s ease;
+}
+
+.task button:hover {
+  color: #df1f0d;
+  font-size: medium;
+}
+
+
+
+.due-date {
+  font-size: 12px;
+  color: #888;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.task:hover {
+  background: #f1f1f1;
+  transform: translateY(-3px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add scrollable task content with visible actions */
+.task span {
+  flex: 1;
+  word-wrap: break-word;
+  max-height: 60px;
+  overflow-y: auto;
+}
+
+.task-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.ordering{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.ordering button{
+
+  background-color: #fa7d72;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+}
+
+
+.ordering button:hover {
+  background-color:  #f81905;
+
+}
+
+@media only screen and (max-width: 604px) {
+  .ordering{
+   
+    flex-direction: column;
+  
+  }
+}
