@@ -103,12 +103,12 @@ project-folder/
 
 - The project is deployed on Github and accessible at:
 
-https://naveenmaurya7705.github.io/Assignment/
+https://github.com/naveenmaurya7705/TodoListApp
 
 **2 GitHub Repository:**
 - The source code is available on GitHub:
 
-https://github.com/naveenmaurya7705/Assignment
+https://naveenmaurya7705.github.io/TodoListApp/
 
 # License
 
